@@ -1,0 +1,26 @@
+# Define a class that implements the Scannable and Faxable interfaces  
+class Image(Scannable, Faxable):  
+    def __init__(self, data: bytes):  
+        self.data = data  
+
+    # Implement the scan method  
+    def scan(self) -> None:  
+        print("Scanning the image")  
+
+    # Implement the fax method  
+    def fax(self) -> None:  
+        print("Faxing the image")  
+
+# Define a class that depends on the Printable interface  
+class Printer:  
+    def print(self, printable: Printable) -> None:  
+        # Use the print method of the printable object  
+        printable.print()  
+
+# Define a class that depends on the Scannable and Faxable interfaces  
+class ScannerFaxe:  
+    def scan_and_fax(self, scannable: Scannable, faxable: Faxable) -> None:  
+        # Use the scan method of the scannable object  
+        scannable.scan()  
+        # Use the fax method of the faxable object  
+        faxable.fax()

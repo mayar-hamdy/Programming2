@@ -1,0 +1,17 @@
+class Human:  
+    def __init__(self, name="no name", age=0, nationality="no nationality", gender="no gender"):  
+        self.name = name  
+        self.age = age  
+        self.nationality = nationality  
+        self.gender = gender  
+    
+    def speak(self):  
+        print("Hello, my name is:", self.name)  
+
+class Man(Human):  
+    def __init__(self, name, age, nationality):  
+        super().__init__(name, age, nationality, "Male")  
+        
+# ≈‰‘«¡ ﬂ«∆‰ „‰ «·›∆… Man  
+bob = Man("Bob", 42, "British")  
+bob.speak()  # ”Ìÿ»⁄: Hello, my name is: Bob

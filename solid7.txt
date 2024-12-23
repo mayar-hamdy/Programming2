@@ -1,0 +1,33 @@
+from abc import ABC, abstractmethod  
+
+class Vehicle(ABC):  
+    @abstractmethod  
+    def start(self):  
+        pass  
+
+    @abstractmethod  
+    def stop(self):  
+        pass  
+
+class Car(Vehicle):  
+    def start(self):  
+        return "Car starting"  
+
+    def stop(self):  
+        return "Car stopping"  
+
+class Bike(Vehicle):  
+    def start(self):  
+        return "Bike starting"  
+
+    def stop(self):  
+        return "Bike stopping"  
+
+# Usage  
+car = Car()  
+bike = Bike()  
+
+print(car.start())  # Output: Car starting  
+print(car.stop())   # Output: Car stopping  
+print(bike.start()) # Output: Bike starting  
+print(bike.stop())  # Output: Bike stopping

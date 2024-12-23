@@ -1,0 +1,36 @@
+class OrderProcessor:  
+    def __init__(self, order, inventory, notifier):  
+        self.order = order  
+        self.inventory = inventory  
+        self.notifier = notifier  
+
+    def process_order(self):  
+        # Validate order  
+        if not self.order.is_valid():  
+            raise Exception("Order is not valid")  
+
+        # Update inventory  
+        for item in self.order.items:  
+            self.inventory.update(item)  
+
+        # Send notification  
+        self.notifier.send("Order processed", self.order.customer_email)  
+        print("Order processed successfully")
+
+class OrderProcessor:  
+    def __init__(self, order, inventory_manager, notifier):  
+        self.order = order  
+        self.inventory_manager = inventory_manager  
+        self.notifier = notifier  
+
+    def process_order(self):  
+        # Validate order  
+        if not self.order.is_valid():  
+            raise Exception("Order is not valid")  
+
+        # Update inventory  
+        self.inventory_manager.update_inventory(self.order.items)  
+
+        # Send notification  
+        self.notifier.send_notification("Order processed", self.order.customer_email)  
+        print("Order processed successfully")

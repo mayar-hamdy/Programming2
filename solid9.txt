@@ -1,0 +1,29 @@
+from abc import ABC, abstractmethod  
+from typing import Protocol  
+
+# Define an interface for printable objects  
+class Printable(Protocol):  
+    @abstractmethod  
+    def print(self) -> None:  
+        pass  
+
+# Define an interface for scannable objects  
+class Scannable(Protocol):  
+    @abstractmethod  
+    def scan(self) -> None:  
+        pass  
+
+# Define an interface for faxable objects  
+class Faxable(Protocol):  
+    @abstractmethod  
+    def fax(self) -> None:  
+        pass  
+
+# Define a class that implements the Printable interface  
+class Document(Printable):  
+    def __init__(self, content: str):  
+        self.content = content  
+
+    # Implement the print method  
+    def print(self) -> None:  
+        print(self.content)

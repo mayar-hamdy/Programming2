@@ -1,0 +1,19 @@
+class TextEditor:  
+    def __init__(self):  
+        self.text = ""  
+
+    def set_bold(self, bold):  
+        # Implementation for setting bold formatting  
+        pass  
+
+    def set_italic(self, italic):  
+        # Implementation for setting italic formatting  
+        pass  
+
+    def set_underline(self, underline):  
+        # Implementation for setting underline formatting  
+        pass  
+
+    def insert_text(self, text):  
+        # Implementation for inserting text  
+        pass

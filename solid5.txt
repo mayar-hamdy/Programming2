@@ -1,0 +1,19 @@
+class Bird:  
+    def move(self):  
+        return "I can move!"  
+
+class FlyingBird(Bird):  
+    def fly(self):  
+        return "I can fly!"  
+
+class NonFlyingBird(Bird):  
+    def walk(self):  
+        return "I can walk!"  
+
+class Sparrow(FlyingBird):  
+    def fly(self):  
+        return "I can fly high in the sky!"  
+
+class Ostrich(NonFlyingBird):  
+    def walk(self):  
+        return "I can run fast!"
